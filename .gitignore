@@ -65,7 +65,7 @@ typings/
 .next
 
 # build output
-lib/
+dist/
 esm
 
 .DS_Store

@@ -19,6 +19,11 @@
   "devDependencies": {
     "typescript": "^5.0.4"
   },
+  "files": [
+    "dist",
+    "package.json",
+    "README.md"
+  ],
   "peerDependencies": {
     "react": "^18.2.0"
   }

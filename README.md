@@ -1,9 +1,9 @@
 <div align="center">
     <br/>
     <br/>
-    <h1>⚛️ React "download hook"<br /><br /></h1>
+    <h1>⚛️ React "download file hook"<br /><br /></h1>
     <br />
-    <pre>npm i react-download-hook</pre>
+    <pre>npm i react-downloadfile-hook</pre>
     <br />
     <br />
 </div>
@@ -19,7 +19,7 @@ Simple React hook to handle data downloading as a file without any dependencies 
 This is a recommended method to handle downloading. You need to provide required `fileName`, `format/mime-type`, `data` properties into the hook.
 
 ```jsx
-import { useDownloadFile } from "react-download-hook";
+import { useDownloadFile } from "react-downloadfile-hook";
 
 const { linkProps } = useDownloadFile({
   fileName,
@@ -35,7 +35,7 @@ const { linkProps } = useDownloadFile({
 The simplest way to handle downloading. It also named as a "force download a file". It uses old-school method, adding a link into the DOM and click it.
 
 ```jsx
-import { useDownloadFile } from "react-download-hook";
+import { useDownloadFile } from "react-downloadfile-hook";
 
 const { downloadFile } = useDownloadFile({
   fileName,
@@ -52,7 +52,7 @@ If your data is not a `string` type (`ArrayBuffer`, `Uint8Array`, etc), you may 
 You need provide `onCreateBlob` callback that returns `Blob`.
 
 ```jsx
-import { useDownloadFile } from "react-download-hook";
+import { useDownloadFile } from "react-downloadfile-hook";
 
 const { downloadFile, linkProps } = useDownloadFile({
   fileName,

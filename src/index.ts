@@ -8,6 +8,7 @@ function forceDownload(fileName, blobUrl) {
   anchor.download = fileName;
   document.body.appendChild(anchor);
   anchor.click();
+  anchor.remove();
 }
 
 interface UseDownloadFileProps<T> {

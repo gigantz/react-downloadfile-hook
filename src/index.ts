@@ -1,6 +1,5 @@
 import { useMemo } from "react";
-import { HintedString } from "./interface";
-import { MimeType } from "./interface";
+import { HintedString, MimeType } from "./interface";
 
 function forceDownload(fileName, blobUrl) {
   var anchor = document.createElement("a");

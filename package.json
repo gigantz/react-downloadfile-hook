@@ -1,6 +1,6 @@
 {
   "name": "react-downloadfile-hook",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React hook to download data as file",
   "main": "dist/index.js",
   "homepage": "https://github.com/gigantz/react-downloadfile-hook",

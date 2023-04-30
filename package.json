@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "React hook to download data as file",
   "main": "dist/index.js",
+  "repository": "https://github.com/gigantz/react-download-hook.git",
   "scripts": {
     "build": "tsc"
   },
@@ -20,7 +21,7 @@
     "typescript": "^5.0.4"
   },
   "files": [
-    "dist/*",
+    "./dist/**/*",
     "package.json",
     "README.md"
   ],

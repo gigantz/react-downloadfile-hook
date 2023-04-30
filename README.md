@@ -1,7 +1,7 @@
 <div align="center">
     <br/>
     <br/>
-    <h1>React download hook<br /><br /></h1>
+    <h1>⚛️ React "download hook"<br /><br /></h1>
     <br />
     <pre>npm i react-download-hook</pre>
     <br />

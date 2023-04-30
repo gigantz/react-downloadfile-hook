@@ -1,0 +1,25 @@
+{
+  "name": "react-download-hook",
+  "version": "1.0.0",
+  "description": "React hook to download data as file",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "react-hook",
+    "useDownloadFile",
+    "download",
+    "react",
+    "file",
+    "mimetype"
+  ],
+  "author": "Orkhan Jafarov",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  }
+}

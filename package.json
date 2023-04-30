@@ -20,7 +20,7 @@
     "typescript": "^5.0.4"
   },
   "files": [
-    "dist",
+    "dist/*",
     "package.json",
     "README.md"
   ],

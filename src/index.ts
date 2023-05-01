@@ -1,8 +1,8 @@
-import { useMemo } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { HintedString, MimeType } from "./interface";
 
-function forceDownload(fileName, blobUrl) {
-  var anchor = document.createElement("a");
+function forceDownload(fileName: string, blobUrl: string) {
+  const anchor = document.createElement("a");
   anchor.href = blobUrl;
   anchor.download = fileName;
   document.body.appendChild(anchor);
@@ -39,19 +39,28 @@ export function useDownloadFile<T = Blob>({
   data,
   onCreateBlob,
 }: UseDownloadFileProps<T>) {
-  const blobUrl = useMemo(() => {
-    let blob;
-    if (!(data instanceof Blob)) {
-      blob = onCreateBlob
-        ? onCreateBlob(data as T, format)
-        : new Blob([data as string], { type: format });
-    } else {
-      blob = data;
-    }
-    return URL.createObjectURL(blob);
+  const [blobUrl, setBlobUrl] = useState<string>("");
+
+  useEffect(() => {
+    const isBlob = data instanceof Blob;
+
+    setBlobUrl(
+      URL.createObjectURL(
+        isBlob
+          ? data
+          : onCreateBlob
+          ? onCreateBlob(data as T, format)
+          : new Blob([data as string], { type: format })
+      )
+    );
+
+    return () => URL.revokeObjectURL(blobUrl);
   }, [format, data, onCreateBlob]);
 
-  const downloadFile = () => forceDownload(fileName, blobUrl);
+  const downloadFile = useCallback(
+    () => forceDownload(fileName, blobUrl),
+    [fileName, blobUrl]
+  );
 
   const linkProps = {
     download: fileName,
